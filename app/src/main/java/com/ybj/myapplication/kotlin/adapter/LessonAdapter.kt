@@ -15,7 +15,7 @@ class LessonAdapter :RecyclerView.Adapter<LessonAdapter.LessonViewHolder>(){
 
     class LessonViewHolder(itemView:View):BaseViewHolder(itemView){
         companion object{
-            fun onCreate(parent:ViewGroup):LessonViewHolU er{
+            fun onCreate(parent:ViewGroup):LessonViewHolder{
                 return LessonViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_lesson,parent,false))
             }
         }
