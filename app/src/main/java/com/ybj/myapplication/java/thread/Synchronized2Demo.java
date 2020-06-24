@@ -1,0 +1,36 @@
+package com.ybj.myapplication.java.thread;
+
+/**
+ * Created by 杨阳洋 on 2020/6/24.
+ */
+public class Synchronized2Demo implements TestDemo{
+
+    private int x = 0;
+
+    private synchronized void count(int newValue){
+        x++;
+    }
+
+    @Override
+    public void runTest() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0 ; i < 1_000_000;i++){
+                    count(i);
+                }
+                System.out.println("final x from 1 : " + x);
+            }
+        }).start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0 ; i < 1_000_000;i++){
+                    count(i);
+                }
+                System.out.println("final x from 2 : " + x);
+            }
+        }).start();
+    }
+}
