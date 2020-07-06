@@ -32,6 +32,7 @@ suspend fun performRequest(request:Int):String{
 }
 
 fun main(){
+
     foo().forEach { value -> println(value) }
 
     runBlocking {

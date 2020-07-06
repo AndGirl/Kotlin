@@ -13,6 +13,8 @@ import com.ybj.myapplication.kotlin.data.Lesson
  */
 class LessonAdapter :RecyclerView.Adapter<LessonAdapter.LessonViewHolder>(){
 
+    private lateinit var onItemClickListener : OnItemClickListener
+
     class LessonViewHolder(itemView:View):BaseViewHolder(itemView){
         companion object{
             fun onCreate(parent:ViewGroup):LessonViewHolder{
@@ -37,6 +39,10 @@ class LessonAdapter :RecyclerView.Adapter<LessonAdapter.LessonViewHolder>(){
 
     }
 
+    fun setOnItemClickListener(onItemClickListener:OnItemClickListener) {
+        this.onItemClickListener = onItemClickListener
+    }
+
     var list:List<Lesson> = ArrayList()
 
     fun updateAndNotify(list:List<Lesson>){
@@ -51,7 +57,14 @@ class LessonAdapter :RecyclerView.Adapter<LessonAdapter.LessonViewHolder>(){
     override fun getItemCount() = list.size
 
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
+        holder.itemView.setOnClickListener {
+            if (onItemClickListener != null) onItemClickListener.onItemClick(it,position)
+        }
         holder.onBind(list.get(position))
+    }
+
+    interface OnItemClickListener{
+        fun onItemClick(view:View,position: Int)
     }
 
 }

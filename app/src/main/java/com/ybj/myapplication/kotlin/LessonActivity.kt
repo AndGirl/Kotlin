@@ -1,7 +1,9 @@
 package com.ybj.myapplication.kotlin
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.LinearLayout
 import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +14,7 @@ import com.ybj.myapplication.R
 import com.ybj.myapplication.kotlin.adapter.LessonAdapter
 import com.ybj.myapplication.kotlin.base.BaseView
 import com.ybj.myapplication.kotlin.data.Lesson
+import com.ybj.myapplication.kotlin.handler.HandlerThreadActivity
 import com.ybj.myapplication.kotlin.presenter.LessonPresenter
 import kotlinx.android.synthetic.main.activity_lesson.*
 
@@ -35,6 +38,18 @@ class LessonActivity : AppCompatActivity() ,BaseView<LessonPresenter>,
         swipe_refresh_layout.setOnRefreshListener(this)
         swipe_refresh_layout.isRefreshing = true
         getPresenter().fetchData()
+        lessonAdapter.setOnItemClickListener(object : LessonAdapter.OnItemClickListener{
+            override fun onItemClick(view: View, position: Int) {
+                when(position){
+                    0 ->
+                        startActivity(Intent(this@LessonActivity,HandlerThreadActivity::class.java))
+                    1 ->
+                        startActivity(Intent(this@LessonActivity,RetrofitActivity::class.java))
+
+                }
+            }
+        })
+
     }
 
     fun showResult(lessons: List<Lesson>) {
