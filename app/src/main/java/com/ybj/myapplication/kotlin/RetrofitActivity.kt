@@ -4,11 +4,15 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.ybj.myapplication.R
 import com.ybj.myapplication.kotlin.api.Api
+import com.ybj.myapplication.kotlin.data.Repo
 import io.reactivex.rxjava3.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_retrofit.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -27,9 +31,20 @@ class RetrofitActivity : AppCompatActivity() {
 
         val api = retrofit.create(Api::class.java)
 
+        api.listRepos("rengwuxian")
+            .enqueue(object :Callback<List<Repo>>{
+                override fun onFailure(call: Call<List<Repo>>, t: Throwable) {
+                }
+
+                override fun onResponse(call: Call<List<Repo>>, response: Response<List<Repo>>) {
+                }
+
+            })
+
+
         GlobalScope.launch (Dispatchers.Main){
             try {
-                val repos = api.listRepos("rengwuxian")
+                val repos = api.listReposRe("rengwuxian")
                 textView.text = repos[0].name
             }catch (e:Exception){
                 textView.text = e.message
@@ -44,10 +59,8 @@ class RetrofitActivity : AppCompatActivity() {
 //                override fun onSuccess(t: String) {
 //                    textView.text = t
 //                }
-//
 //                override fun onSubscribe(d: Disposable?) {
 //                }
-//
 //                override fun onError(e: Throwable) {
 //                    textView.text = e.message
 //                }
