@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".kotlin.constraintLayout.ConstraintSampleActivity">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sample_img"
+        android:background="@color/colorPrimary"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_width="408dp"
+        android:layout_height="173dp"/>
+
+    <ImageView
+        android:id="@+id/sample_img_second"
+        android:src="@mipmap/ic_launcher"
+        android:text="关注"
+        android:layout_marginTop="200dp"
+        app:layout_constraintBottom_toBottomOf="@id/sample_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sample_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

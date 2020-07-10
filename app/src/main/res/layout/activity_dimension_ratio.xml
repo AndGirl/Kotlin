@@ -6,4 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".kotlin.constraintLayout.DimensionRatioActivity">
 
+    <ImageView
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@mipmap/ic_launcher"
+        android:background="@color/colorPrimary"
+        app:layout_constraintDimensionRatio="1:2"
+        android:layout_width="100dp"
+        android:layout_height="0dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

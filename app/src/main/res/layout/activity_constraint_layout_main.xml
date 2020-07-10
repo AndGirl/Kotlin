@@ -6,4 +6,104 @@
     android:layout_height="match_parent"
     tools:context=".kotlin.constraintLayout.ConstraintLayoutMainActivity">
 
+    <Button
+        android:id="@+id/button_sample"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="sample"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button_circular_positioning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CircularPositioning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_sample" />
+
+    <Button
+        android:id="@+id/button_dimension_ratio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="DimensionRatio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_circular_positioning" />
+
+    <Button
+        android:id="@+id/button_percent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Percent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_dimension_ratio" />
+
+    <Button
+        android:id="@+id/button_guide_line"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="GuideLineActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_percent" />
+
+    <Button
+        android:id="@+id/button_helper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Helpers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_guide_line" />
+
+    <Button
+        android:id="@+id/button_circular_reveal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CircularReveal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_helper" />
+
+    <Button
+        android:id="@+id/button_place_holder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="PlaceHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_circular_reveal" />
+
+    <Button
+        android:id="@+id/button_constraint_setX"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ConstraintSetX"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_place_holder" />
+
+    <Button
+        android:id="@+id/button_linear_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="LinearActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_constraint_setX" />
+
+    <Button
+        android:id="@+id/button_flow_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="FlowActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_linear_activity" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

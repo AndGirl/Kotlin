@@ -1,7 +1,8 @@
 package com.ybj.myapplication.kotlin.constraintLayout
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.ybj.myapplication.R
 
 class GuideLineActivity : AppCompatActivity() {
 
