@@ -79,7 +79,6 @@ public class Test {
 
         TypeToken<List<String>> token = new TypeToken<List<String>>() {
         };
-
     }
 
 

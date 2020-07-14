@@ -13,6 +13,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.ybj.myapplication.R
 import com.ybj.myapplication.kotlin.adapter.LessonAdapter
 import com.ybj.myapplication.kotlin.base.BaseView
+import com.ybj.myapplication.kotlin.constraintLayout.ConstraintLayoutMainActivity
 import com.ybj.myapplication.kotlin.data.Lesson
 import com.ybj.myapplication.kotlin.handler.HandlerThreadActivity
 import com.ybj.myapplication.kotlin.presenter.LessonPresenter
@@ -45,7 +46,8 @@ class LessonActivity : AppCompatActivity() ,BaseView<LessonPresenter>,
                         startActivity(Intent(this@LessonActivity,HandlerThreadActivity::class.java))
                     1 ->
                         startActivity(Intent(this@LessonActivity,RetrofitActivity::class.java))
-
+                    2 ->
+                        startActivity(Intent(this@LessonActivity,ConstraintLayoutMainActivity::class.java))
                 }
             }
         })

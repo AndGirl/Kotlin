@@ -13,4 +13,9 @@
         <item name="android:colorControlNormal">@android:color/holo_blue_light</item>
     </style>
 
+    <style name="RecyclerViewBaseSimpleTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">false</item>
+    </style>
+
+
 </resources>

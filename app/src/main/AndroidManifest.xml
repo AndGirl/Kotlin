@@ -12,7 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kotlin.constraintLayout.FlowActivity"></activity>
+        <activity android:name=".kotlin.recyclerView.ItemDecorationRecyclerViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".kotlin.recyclerView.DiffUtilRecyclerViewActivity"></activity>
+        <activity
+            android:name=".kotlin.recyclerView.RecyclerViewBaseSampleActivity"
+            android:theme="@style/RecyclerViewBaseSimpleTheme" />
+        <activity android:name=".kotlin.recyclerView.RecyclerViewMainActivity" />
+        <activity android:name=".kotlin.constraintLayout.FlowActivity" />
         <activity android:name=".kotlin.constraintLayout.LinearActivity" />
         <activity android:name=".kotlin.constraintLayout.ConstraintSetXActivity" />
         <activity android:name=".kotlin.constraintLayout.PlaceHolderActivity" />
@@ -23,13 +35,7 @@
         <activity android:name=".kotlin.constraintLayout.DimensionRatioActivity" />
         <activity android:name=".kotlin.constraintLayout.CircularPositioningActivity" />
         <activity android:name=".kotlin.constraintLayout.ConstraintSampleActivity" />
-        <activity android:name=".kotlin.constraintLayout.ConstraintLayoutMainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".kotlin.constraintLayout.ConstraintLayoutMainActivity" />
         <activity android:name=".kotlin.RetrofitActivity" />
         <activity android:name=".kotlin.PracticeActivity1" />
         <activity android:name=".kotlin.handler.HandlerThreadActivity" />

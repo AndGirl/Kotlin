@@ -51,15 +51,16 @@ class LessonAdapter :RecyclerView.Adapter<LessonAdapter.LessonViewHolder>(){
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LessonViewHolder {
-        return LessonViewHolder.onCreate(parent)
+        val holder = LessonViewHolder.onCreate(parent)
+        holder.itemView.setOnClickListener {
+            if (onItemClickListener != null) onItemClickListener.onItemClick(it,holder.adapterPosition)
+        }
+        return holder
     }
 
     override fun getItemCount() = list.size
 
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
-        holder.itemView.setOnClickListener {
-            if (onItemClickListener != null) onItemClickListener.onItemClick(it,position)
-        }
         holder.onBind(list.get(position))
     }
 

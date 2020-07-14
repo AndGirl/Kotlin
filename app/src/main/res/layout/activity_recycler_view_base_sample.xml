@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sample_recyclerview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".kotlin.recyclerView.RecyclerViewBaseSampleActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ViewAnimator
+        android:id="@+id/sample_recyclerview_output"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <ScrollView
+            android:background="@drawable/tile"
+            android:shadowColor="#7F000000"
+            android:shadowDy="-3.5"
+            android:shadowRadius="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:background="@drawable/tile"
+                android:shadowColor="#7F000000"
+                android:shadowDy="-3.5"
+                android:shadowRadius="2"
+                android:padding="8dp"
+                android:text="Recycler简单示例"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </ScrollView>
+
+        <fragment
+            android:name="com.ybj.myapplication.kotlin.recyclerView.fragment.LogFragment"
+            android:id="@+id/log_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </ViewAnimator>
+
+    <View
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <FrameLayout
+        android:layout_weight="2"
+        android:id="@+id/sample_recyclerview_content_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+</LinearLayout>

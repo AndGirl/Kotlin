@@ -4,9 +4,9 @@ import com.ybj.myapplication.java.arithmetic.tools.SingLinkedList;
 
 /**
  * Created by 杨阳洋 on 2020/7/10.
- * 给定一个链表，输出翻转后的链表，例如输入1-2-3-4-5，输出5-4-3-2-1
+ * 给定一个奇数个元素的链表，查找出这个链表中间位置的结点的数值。
  */
-public class Lesson4_1 {
+public class Lesson4_2 {
 
     public static void main(String [] args){
         SingLinkedList singLinkedList = new SingLinkedList();
@@ -16,14 +16,13 @@ public class Lesson4_1 {
         singLinkedList.add(4,3);
         singLinkedList.add(5,4);
 
-        SingLinkedList.Node cur = singLinkedList.head;
-        SingLinkedList.Node pre = null;
-        SingLinkedList.Node next = null;
-        while(cur != null) {
-            next = cur.next;
-            cur.next = pre;
-            pre = cur;
-            cur = next;
+        SingLinkedList.Node slow = singLinkedList.head;
+        SingLinkedList.Node fast = singLinkedList.head;
+
+        while(fast!=null && fast.next != null && fast.next.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
         }
+        SingLinkedList.Node node = slow;
     }
 }
