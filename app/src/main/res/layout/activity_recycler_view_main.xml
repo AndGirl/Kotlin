@@ -19,4 +19,10 @@
         android:layout_height="wrap_content"
         android:text="RecyerlView-DiffUtil示例" />
 
+    <Button
+        android:id="@+id/button_recyclerview_item_decoration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyerlView-ItemDecoration示例" />
+
 </LinearLayout>

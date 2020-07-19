@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".kotlin.RetrofitActivity">
+    tools:context=".kotlin.retrofit.RetrofitActivity">
 
     <TextView
         android:id="@+id/textView"

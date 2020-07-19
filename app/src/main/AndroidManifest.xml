@@ -12,14 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kotlin.recyclerView.ItemDecorationRecyclerViewActivity">
+        <activity android:name=".kotlin.view.CircleAvatarActivity"></activity>
+        <activity android:name=".kotlin.view.PieChartActivity" />
+        <activity android:name=".kotlin.view.DashBoardActivity" />
+        <activity android:name=".kotlin.view.ViewMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".kotlin.recyclerView.DiffUtilRecyclerViewActivity"></activity>
+        <activity android:name=".kotlin.okhttp.OkHttpActivity" />
+        <activity android:name=".kotlin.recyclerView.ItemDecorationRecyclerViewActivity" />
+        <activity android:name=".kotlin.recyclerView.DiffUtilRecyclerViewActivity" />
         <activity
             android:name=".kotlin.recyclerView.RecyclerViewBaseSampleActivity"
             android:theme="@style/RecyclerViewBaseSimpleTheme" />
@@ -36,7 +41,7 @@
         <activity android:name=".kotlin.constraintLayout.CircularPositioningActivity" />
         <activity android:name=".kotlin.constraintLayout.ConstraintSampleActivity" />
         <activity android:name=".kotlin.constraintLayout.ConstraintLayoutMainActivity" />
-        <activity android:name=".kotlin.RetrofitActivity" />
+        <activity android:name=".kotlin.retrofit.RetrofitActivity" />
         <activity android:name=".kotlin.PracticeActivity1" />
         <activity android:name=".kotlin.handler.HandlerThreadActivity" />
         <activity android:name=".kotlin.LessonActivity" />

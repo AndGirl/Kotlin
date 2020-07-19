@@ -1,8 +1,10 @@
 package com.ybj.myapplication.kotlin
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.ybj.myapplication.R
 import com.ybj.myapplication.kotlin.data.User
@@ -21,6 +23,8 @@ class LoginKotlinActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_kotlin)
+
+        drawBadge()
 
         CacheUtils.get(usernameKey)
         login_username.setText(CacheUtils.get(usernameKey))
@@ -52,6 +56,13 @@ class LoginKotlinActivity : AppCompatActivity(), View.OnClickListener {
             startActivity(Intent(this,LessonActivity::class.java))
         }
 
+    }
+
+    private fun drawBadge(){
+        val decorView: ViewGroup = window.decorView as ViewGroup
+        val badge:View = View(this)
+        badge.setBackgroundColor(Color.BLUE)
+        decorView.addView(badge,200,200)
     }
 
     fun verify(user:User):Boolean{

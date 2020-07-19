@@ -1,7 +1,8 @@
 package com.ybj.myapplication.kotlin.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.ybj.myapplication.R
 
 class CircleAvatarActivity : AppCompatActivity() {
 
@@ -9,4 +10,7 @@ class CircleAvatarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_circle_avatar)
     }
+
+
+
 }

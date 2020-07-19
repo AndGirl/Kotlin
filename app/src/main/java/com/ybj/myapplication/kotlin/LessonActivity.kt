@@ -17,6 +17,8 @@ import com.ybj.myapplication.kotlin.constraintLayout.ConstraintLayoutMainActivit
 import com.ybj.myapplication.kotlin.data.Lesson
 import com.ybj.myapplication.kotlin.handler.HandlerThreadActivity
 import com.ybj.myapplication.kotlin.presenter.LessonPresenter
+import com.ybj.myapplication.kotlin.recyclerView.RecyclerViewMainActivity
+import com.ybj.myapplication.kotlin.retrofit.RetrofitActivity
 import kotlinx.android.synthetic.main.activity_lesson.*
 
 
@@ -45,9 +47,12 @@ class LessonActivity : AppCompatActivity() ,BaseView<LessonPresenter>,
                     0 ->
                         startActivity(Intent(this@LessonActivity,HandlerThreadActivity::class.java))
                     1 ->
-                        startActivity(Intent(this@LessonActivity,RetrofitActivity::class.java))
+                        startActivity(Intent(this@LessonActivity,
+                            RetrofitActivity::class.java))
                     2 ->
                         startActivity(Intent(this@LessonActivity,ConstraintLayoutMainActivity::class.java))
+                    3 ->
+                        startActivity(Intent(this@LessonActivity,RecyclerViewMainActivity::class.java))
                 }
             }
         })
