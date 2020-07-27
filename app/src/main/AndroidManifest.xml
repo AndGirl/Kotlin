@@ -12,7 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kotlin.view.CircleAvatarActivity"></activity>
+        <activity android:name=".kotlin.view.ScalableImageActivity"></activity>
+        <activity android:name=".kotlin.view.TagLayoutActivity" />
+        <activity android:name=".kotlin.view.MaterialTextViewActivity" />
+        <activity android:name=".kotlin.view.AnimatorMainActivity" />
+        <activity android:name=".kotlin.view.CameraActivity" />
+        <activity android:name=".kotlin.view.BreakTextActivity" />
+        <activity android:name=".kotlin.view.SportViewActivity" />
+        <activity android:name=".kotlin.view.CircleAvatarActivity" />
         <activity android:name=".kotlin.view.PieChartActivity" />
         <activity android:name=".kotlin.view.DashBoardActivity" />
         <activity android:name=".kotlin.view.ViewMainActivity">

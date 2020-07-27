@@ -14,3 +14,5 @@ val Float.dp: Float
 
 fun toast(string: String, duration: Int = Toast.LENGTH_SHORT) =
     Toast.makeText(BaseApplication.currentApplication, string, duration).show()
+
+fun getZForCamera() = -4 * Resources.getSystem().displayMetrics.density

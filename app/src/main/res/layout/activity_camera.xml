@@ -6,4 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".kotlin.view.CameraActivity">
 
+    <com.ybj.myapplication.kotlin.widget.CameraView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

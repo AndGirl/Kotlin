@@ -16,6 +16,13 @@ class ViewMainActivity : AppCompatActivity(), View.OnClickListener {
         dash_board.setOnClickListener(this)
         pie_chart.setOnClickListener(this)
         avatar_xfermode.setOnClickListener(this)
+        sport_view.setOnClickListener(this)
+        break_text.setOnClickListener(this)
+        camera_view.setOnClickListener(this)
+        animator_view.setOnClickListener(this)
+        material_edit_text.setOnClickListener(this)
+        tag_layout.setOnClickListener(this)
+        scalable_image.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -23,6 +30,13 @@ class ViewMainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.dash_board -> startActivity(Intent(this,DashBoardActivity::class.java))
             R.id.pie_chart -> startActivity(Intent(this,PieChartActivity::class.java))
             R.id.avatar_xfermode -> startActivity(Intent(this,CircleAvatarActivity::class.java))
+            R.id.sport_view -> startActivity(Intent(this,SportViewActivity::class.java))
+            R.id.break_text -> startActivity(Intent(this,BreakTextActivity::class.java))
+            R.id.camera_view -> startActivity(Intent(this,CameraActivity::class.java))
+            R.id.animator_view -> startActivity(Intent(this,AnimatorMainActivity::class.java))
+            R.id.material_edit_text -> startActivity(Intent(this,MaterialTextViewActivity::class.java))
+            R.id.tag_layout -> startActivity(Intent(this,TagLayoutActivity::class.java))
+            R.id.scalable_image -> startActivity(Intent(this,ScalableImageActivity::class.java))
         }
     }
 }
