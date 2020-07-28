@@ -23,6 +23,7 @@ class ViewMainActivity : AppCompatActivity(), View.OnClickListener {
         material_edit_text.setOnClickListener(this)
         tag_layout.setOnClickListener(this)
         scalable_image.setOnClickListener(this)
+        multi_touch.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -37,6 +38,7 @@ class ViewMainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.material_edit_text -> startActivity(Intent(this,MaterialTextViewActivity::class.java))
             R.id.tag_layout -> startActivity(Intent(this,TagLayoutActivity::class.java))
             R.id.scalable_image -> startActivity(Intent(this,ScalableImageActivity::class.java))
+            R.id.multi_touch -> startActivity(Intent(this,MultiTouchActivity::class.java))
         }
     }
 }

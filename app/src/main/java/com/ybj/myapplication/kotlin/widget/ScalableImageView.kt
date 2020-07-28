@@ -26,7 +26,7 @@ import java.math.BigDecimal
 class ScalableImageView(context: Context?, attrs: AttributeSet?) : ImageView(context, attrs){
 
     var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    lateinit var bitmap: Bitmap
+    var bitmap: Bitmap
     val IMAGE_WIDTH = 300f.dp
     val OVER_FRACTION = 1.5f
     /*中心偏移量*/
