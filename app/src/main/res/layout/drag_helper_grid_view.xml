@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.hencoder.a21_drag_nestedscroll.view.drag.DragHelperGridView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.ybj.myapplication.kotlin.widget.DragHelperGridView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/view"
@@ -36,4 +35,4 @@
         android:layout_height="wrap_content"
         android:background="#546E7A" />
 
-</com.hencoder.a21_drag_nestedscroll.view.drag.DragHelperGridView>
+</com.ybj.myapplication.kotlin.widget.DragHelperGridView>

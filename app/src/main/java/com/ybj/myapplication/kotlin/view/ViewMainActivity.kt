@@ -25,6 +25,7 @@ class ViewMainActivity : AppCompatActivity(), View.OnClickListener {
         scalable_image.setOnClickListener(this)
         multi_touch.setOnClickListener(this)
         view_pager.setOnClickListener(this)
+        drag.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -41,6 +42,7 @@ class ViewMainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.scalable_image -> startActivity(Intent(this,ScalableImageActivity::class.java))
             R.id.multi_touch -> startActivity(Intent(this,MultiTouchActivity::class.java))
             R.id.view_pager -> startActivity(Intent(this,ViewPagerActivity::class.java))
+            R.id.drag -> startActivity(Intent(this,DragHelperActivity::class.java))
         }
     }
 }

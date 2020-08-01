@@ -19,6 +19,7 @@ import com.ybj.myapplication.kotlin.handler.HandlerThreadActivity
 import com.ybj.myapplication.kotlin.presenter.LessonPresenter
 import com.ybj.myapplication.kotlin.recyclerView.RecyclerViewMainActivity
 import com.ybj.myapplication.kotlin.retrofit.RetrofitActivity
+import com.ybj.myapplication.kotlin.rxjava.RxJavaMainActivity
 import com.ybj.myapplication.kotlin.view.ViewMainActivity
 import kotlinx.android.synthetic.main.activity_lesson.*
 
@@ -56,6 +57,8 @@ class LessonActivity : AppCompatActivity() ,BaseView<LessonPresenter>,
                         startActivity(Intent(this@LessonActivity,RecyclerViewMainActivity::class.java))
                     4 ->
                         startActivity(Intent(this@LessonActivity,ViewMainActivity::class.java))
+                    5 ->
+                        startActivity(Intent(this@LessonActivity,RxJavaMainActivity::class.java))
                 }
             }
         })
